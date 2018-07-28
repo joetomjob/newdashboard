@@ -1,7 +1,7 @@
 <div fxLayout="column" class="stateofchargecontrol">
   <div style="padding: 2vh">
     <p class="textSmall">CHARGE REMAINING</p>
-    <div class="battery textSmall">
+    <div class="battery">
       <div [ngClass]="_percentRemaining?getChargeClass():''" [style.width.%]="_percentRemaining">
         {{_percentRemaining}}%
       </div>
@@ -9,7 +9,7 @@
   </div>
   <div style="padding: 2vh">
     <p class="textSmall">MILEAGE REMAINING</p>
-    <div class="battery textSmall">
+    <div class="battery">
       <div [ngClass]="_remainingMileage?getMileageClass():''" [style.width.%]="_mileagepercent">
         {{_remainingMileage}}miles
       </div>

@@ -3,7 +3,7 @@
 .maingrid{
   display: flex;
   flex-direction: row;
-  height: 47vh;
+  height: 50vh;
   background-color:hsl(275, 0%, 15%);
 }
 
@@ -11,13 +11,13 @@
 .chargefirmgrid{
   display: grid;
   grid: 50% 50% / 1fr;
-  width: 33vw;
+  width: 40vw;
   background-color:hsl(275, 0%, 20%);
   margin: 1vw;
 }
 
 .driverstategrid{
-  width: 33vw;
+  width: 40vw;
   background-color:hsl(275, 0%, 27%);
   margin: 1vw;
 }

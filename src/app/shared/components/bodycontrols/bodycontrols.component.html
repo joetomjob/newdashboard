@@ -6,8 +6,8 @@
             DOORS
           </mat-panel-title>
           <mat-panel-description>
-            <mat-chip-list>
-              <mat-chip *ngIf="_doors" style="background-color: green" class="textSmall" selected>OPEN</mat-chip>
+            <mat-chip-list style="padding-left: 1.6vw">
+              <mat-chip *ngIf="_doors" style="background-color: hsl(0, 100%, 39%);" class="textSmall" selected>OPEN</mat-chip>
               <mat-chip *ngIf="!_doors" style="background-color: hsl(275, 0%, 45%);" class="textSmall" selected>CLOSED</mat-chip>
             </mat-chip-list>
           </mat-panel-description>
@@ -81,6 +81,10 @@
               WINDOWS
             </mat-panel-title>
             <mat-panel-description>
+              <mat-chip-list>
+                <mat-chip *ngIf="_windows" style="background-color: hsl(0, 100%, 39%);" class="textSmall" selected>OPEN</mat-chip>
+                <mat-chip *ngIf="!_windows" style="background-color: hsl(275, 0%, 45%);" class="textSmall" selected>CLOSED</mat-chip>
+              </mat-chip-list>
             </mat-panel-description>
           </mat-expansion-panel-header>
           <table style="width: 100%">
@@ -124,16 +128,16 @@
             </tr>
             <tr>
               <td>
-                  <mat-slider vertical [(ngModel)]="_windowfl" invert (change)="changeWindow()"></mat-slider>
+                  <mat-slider vertical [(ngModel)]="_windowfl" invert (change)="bodyControlChange()"></mat-slider>
               </td>
               <td>
-                  <mat-slider vertical [(ngModel)]="_windowfr" invert (change)="changeWindow()"></mat-slider>
+                  <mat-slider vertical [(ngModel)]="_windowfr" invert (change)="bodyControlChange()"></mat-slider>
               </td>
               <td>
-                  <mat-slider vertical [(ngModel)]="_windowbl" invert (change)="changeWindow()"></mat-slider>
+                  <mat-slider vertical [(ngModel)]="_windowbl" invert (change)="bodyControlChange()"></mat-slider>
               </td>
               <td>
-                  <mat-slider vertical [(ngModel)]="_windowbr" invert (change)="changeWindow()"></mat-slider>
+                  <mat-slider vertical [(ngModel)]="_windowbr" invert (change)="bodyControlChange()"></mat-slider>
               </td>
             </tr>
             <tr>

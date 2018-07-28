@@ -8,5 +8,9 @@
   "doorsbl":false,
   "doorsbr":false,
   "trunk":false,
-  "frunk":false
+  "frunk":false,
+  "windowfl":1,
+  "windowfr":1,
+  "windowbl":1,
+  "windowbr":1
 }

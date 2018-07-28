@@ -9,6 +9,10 @@ export class BodyControl {
   doorsbr: boolean = false;
   trunk: boolean = false;
   frunk: boolean = false;
+  windowfl: number = 1;
+  windowfr: number = 1;
+  windowbl: number = 1;
+  windowbr: number = 1;
 
   static asBodyControl (json: any): BodyControl {
     const li: BodyControl = Object.assign(new BodyControl(), json);
