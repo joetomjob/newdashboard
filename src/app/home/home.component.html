@@ -1,30 +1,40 @@
-<div class="parentgrid">
-  <div class="maingrid">
-    <div class="hvacgrid">
-      <app-hvac></app-hvac>
-    </div>
-    <div class="driverstategrid">
-      <app-driverstate></app-driverstate>
-    </div>
-    <!-- <div class="identitygrid">
-      <app-identity></app-identity>
-    </div> -->
-  </div>
-  <div class="maingrid"
-       fxLayoutGap="10px">
-    <div class="bodycontrolsgrid">
-      <app-bodycontrols></app-bodycontrols>
-    </div>
-    <div class="chargefirmgrid">
-      <div>
-        <app-stateofcharge></app-stateofcharge>
-      </div>
-      <div>
-        <app-firmware></app-firmware>
-      </div>
-    </div>
-    <!-- <div class="configurationgrid">
-      <app-configuration></app-configuration>
-    </div> -->
-  </div>
-</div>
+<mat-sidenav-container class="example-container" *ngIf="shouldRun">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+                 (closed)="events.push('close!')">
+      Sidenav content
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+      <div class="parentgrid">
+          <div class="maingrid">
+            <div class="hvacgrid">
+              <app-hvac></app-hvac>
+            </div>
+            <div class="driverstategrid">
+              <app-driverstate></app-driverstate>
+            </div>
+            <!-- <div class="identitygrid">
+              <app-identity></app-identity>
+            </div> -->
+          </div>
+          <div class="maingrid"
+               fxLayoutGap="10px">
+            <div class="bodycontrolsgrid">
+              <app-bodycontrols></app-bodycontrols>
+            </div>
+            <div class="chargefirmgrid">
+              <div>
+                <app-stateofcharge></app-stateofcharge>
+              </div>
+              <div>
+                <app-firmware></app-firmware>
+              </div>
+            </div>
+            <!-- <div class="configurationgrid">
+              <app-configuration></app-configuration>
+            </div> -->
+          </div>
+        </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
