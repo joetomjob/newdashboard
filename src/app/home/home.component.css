@@ -4,22 +4,46 @@
   display: flex;
   flex-direction: row;
   height: 47vh;
+  background-color:hsl(275, 0%, 15%);
 }
 
-.maingrid div{
-  border-color: white;
-  border-style: solid;
-}
 
 .chargefirmgrid{
   display: grid;
   grid: 50% 50% / 1fr;
   width: 33vw;
+  background-color:hsl(275, 0%, 20%);
+  margin: 1vw;
 }
 
-.chargefirmgrid div{
-  border-color: white;
-  border-style: solid;
+.driverstategrid{
+  width: 33vw;
+  background-color:hsl(275, 0%, 27%);
+  margin: 1vw;
+}
+
+.identitygrid{
+  width: 33vw;
+  background-color:hsl(275, 0%, 20%);
+  margin: 1vw;
+}
+
+.bodycontrolsgrid{
+  width: 33vw;
+  background-color:hsl(275, 0%, 20%);
+  margin: 1vw;
+}
+
+.hvacgrid{
+  width: 33vw;
+  background-color:hsl(275, 0%, 20%);
+  margin: 1vw;
+}
+
+.configurationgrid{
+  width: 33vw;
+  background-color:hsl(275, 0%, 20%);
+  margin: 1vw;
 }
 
 .config{

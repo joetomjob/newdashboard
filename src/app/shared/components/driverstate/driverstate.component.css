@@ -11,9 +11,9 @@
   text-align: center;
 }
 
-.dsgrid div{
-  border-color: white;
-  border-style: solid;
+.dscontrol{
+  text-align: center;
+  align-items: center;
 }
 
 .speed{
@@ -36,13 +36,13 @@
 
 .text{
   color: white;
-  font-size: 2vmin;
+  font-size: 2.2vmin;
   font-family: Arial;
 }
 
 .textLarge{
   color: white;
-  font-size: 4vmin;
+  font-size: 7vmin;
   font-family: Helvetica, sans-serif;
 }
 

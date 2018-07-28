@@ -1,11 +1,5 @@
 <div class="parentgrid">
   <div class="maingrid">
-    <div style="width: 33vw">
-      <app-driverstate></app-driverstate>
-    </div>
-    <div style="width: 33%">
-      <app-identity></app-identity>
-    </div>
     <div  class="chargefirmgrid">
       <div>
         <app-stateofcharge></app-stateofcharge>
@@ -14,16 +8,23 @@
         <app-firmware></app-firmware>
       </div>
     </div>
+    <div class="driverstategrid">
+      <app-driverstate></app-driverstate>
+    </div>
+    <div class="identitygrid">
+      <app-identity></app-identity>
+    </div>
   </div>
-  <div class="maingrid">
-    <div style="width: 33vw">
+  <div class="maingrid"
+       fxLayoutGap="10px">
+    <div class="bodycontrolsgrid">
       <app-bodycontrols></app-bodycontrols>
     </div>
-    <div class="config">
-      <app-configuration></app-configuration>
-    </div>
-    <div style="width: 33vw">
+    <div class="hvacgrid">
       <app-hvac></app-hvac>
+    </div>
+    <div class="configurationgrid">
+      <app-configuration></app-configuration>
     </div>
   </div>
 </div>

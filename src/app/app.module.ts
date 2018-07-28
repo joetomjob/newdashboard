@@ -10,11 +10,14 @@ import { BodycontrolsComponent } from './shared/components/bodycontrols/bodycont
 import { HvacComponent } from './shared/components/hvac/hvac.component';
 import { FirmwareComponent } from './shared/components/firmware/firmware.component';
 import { HomeComponent } from './home/home.component';
-import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import { MatCommonModule} from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatCommonModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,7 @@ import { MatCommonModule} from '@angular/material';
     BodycontrolsComponent,
     HvacComponent,
     FirmwareComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,10 @@ import { MatCommonModule} from '@angular/material';
     FormsModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
-    MatCommonModule
+    MatCommonModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
