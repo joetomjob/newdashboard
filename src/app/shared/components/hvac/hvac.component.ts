@@ -15,6 +15,11 @@ export class HvacComponent implements OnInit {
   _externaltemp: number = -1;
   _fanspeed: number = -1;
   _tempSlider: number = -1;
+  _sunroof: boolean = false;
+  _chargeport: boolean = false;
+  _sunrooftext: string = '';
+  _chargeporttext: string = '';
+
   constructor(public _myService: HvacService) { }
 
   ngOnInit() {
@@ -29,6 +34,16 @@ export class HvacComponent implements OnInit {
       this._externaltemp = this._hvac.externalTemp;
       this._fanspeed = this._hvac.fanspeed;
       this._tempSlider = this._hvac.sliderTemp;
+      if (this._sunroof) {
+        this._sunrooftext = 'OPEN';
+      } else {
+        this._sunrooftext = 'CLOSED';
+      }
+      if (this._chargeport) {
+        this._chargeporttext = 'OPEN';
+      } else {
+        this._chargeporttext = 'CLOSED';
+      }
     } else {
       this._myService.getHVACInfo()
         .subscribe((hv: HVAC) => {
@@ -37,6 +52,16 @@ export class HvacComponent implements OnInit {
           this._externaltemp = this._hvac.externalTemp;
           this._fanspeed = this._hvac.fanspeed;
           this._tempSlider = this._ambienttemp;
+          if (this._sunroof) {
+            this._sunrooftext = 'OPEN';
+          } else {
+            this._sunrooftext = 'CLOSED';
+          }
+          if (this._chargeport) {
+            this._chargeporttext = 'OPEN';
+          } else {
+            this._chargeporttext = 'CLOSED';
+          }
         }, (err: any) => {
           console.log(err);
         });
@@ -75,4 +100,16 @@ export class HvacComponent implements OnInit {
     localStorage.setItem(this.key, JSON.stringify(this._hvac));
   }
 
+  public bodyControlChange() {
+    if (this._sunroof) {
+      this._sunrooftext = 'OPEN';
+    } else {
+      this._sunrooftext = 'CLOSED';
+    }
+    if (this._chargeport) {
+      this._chargeporttext = 'OPEN';
+    } else {
+      this._chargeporttext = 'CLOSED';
+    }
+  }
 }

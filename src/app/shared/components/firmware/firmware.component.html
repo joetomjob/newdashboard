@@ -1,12 +1,20 @@
-<div class="firmwaregrid">
-  <div class="installed">
-    <p class="textSmall">Installed Version</p>
-    <p class="text">{{_installedVersion}}</p>
-  </div>
-  <div class="installing">
-    <p class="textSmall">Installing Version</p>
-    <p class="text">{{_installingVersion}}</p>
-  </div>
+<div fxLayout="column" class="firmwarecontrol">
+  <table style="width: 100%;">
+    <tr>
+      <td>
+        <div class="installed">
+          <p class="textSmall">INSTALLED VERSION</p>
+          <p class="text">{{_installedVersion}}</p>
+        </div>
+      </td>
+      <td>
+        <div class="installing">
+          <p class="textSmall">INSTALLING VERSION</p>
+          <p class="text">{{_installingVersion}}</p>
+        </div>
+      </td>
+    </tr>
+  </table>
   <div class="installingbar">
     <div class="myProgress">
       <div class="myBar" [style.width.%]="_installingJobPercent"></div>

@@ -3,6 +3,12 @@ export class BodyControl {
   doors: boolean = false;
   chargeport: boolean = false;
   windows: boolean = false;
+  doorsfl: boolean = false;
+  doorsfr: boolean = false;
+  doorsbl: boolean = false;
+  doorsbr: boolean = false;
+  trunk: boolean = false;
+  frunk: boolean = false;
 
   static asBodyControl (json: any): BodyControl {
     const li: BodyControl = Object.assign(new BodyControl(), json);

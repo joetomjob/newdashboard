@@ -2,5 +2,11 @@
   "sunroof": true,
   "doors":false,
   "chargeport":false,
-  "windows":false
+  "windows":false,
+  "doorsfl":false,
+  "doorsfr":false,
+  "doorsbl":false,
+  "doorsbr":false,
+  "trunk":false,
+  "frunk":false
 }

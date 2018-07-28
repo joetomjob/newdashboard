@@ -1,32 +1,29 @@
-.stateofchargegrid{
-  display: grid;
-  grid: 1fr 1fr/ 1fr;
-  height: 100%;
-  width: 100%;
+.stateofchargecontrol{
+  text-align: center;
+  align-items: center;
 }
 
 .textSmall{
-  color: white;
-  font-size: 1.25vmin;
+  color: hsl(0, 0%, 85%);
+  font-size: 1.5vmin;
   font-family: Arial;
-  text-align: center;
-  text-align-all: center;
+  font-weight: bold;
 }
 
 .battery:after {
   background-color: #000;
-  border: 0.05vmax solid #fff;
+  border: 0.1vmax solid hsl(0, 0%, 85%);
   content: "";
   display: block;
   height: 1.5vh;
   position: absolute;
-  right: -0.35vw;
+  right: -0.25vw;
   top: 0.55vh;
   width: 0.2vw;
 }
 .battery {
   background-color: #333333;
-  border: 0.05vmax solid #fff;
+  border: 0.1vmax solid hsl(0, 0%, 85%);
   height: 3vh;
   margin-left: auto;
   margin-right: auto;

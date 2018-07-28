@@ -1,49 +1,33 @@
-.dsgrid{
-  display: grid;
-  grid: 1fr 1fr 1fr 1fr / 1fr;
-  height: 100%;
-  width: 100%;
-  grid-template-areas:
-      "a"
-      "a"
-      "b"
-      "c";
-  text-align: center;
-}
-
 .dscontrol{
   text-align: center;
   align-items: center;
 }
 
-.speed{
-  grid-area: a;
-}
+.speed{}
 
-.acceleration{
-  grid-area: b;
-}
+.acceleration{}
 
-.gear{
-  grid-area: c;
-}
+.gear{}
 
 .textSmall{
-  color: white;
+  color: hsl(0, 0%, 80%);
   font-size: 1.25vmin;
   font-family: Arial;
+  margin: 1.5vh;
 }
 
 .text{
-  color: white;
+  color: hsl(0, 0%, 95%);
   font-size: 2.2vmin;
   font-family: Arial;
+  margin: 1.5vh;
 }
 
 .textLarge{
   color: white;
   font-size: 7vmin;
   font-family: Helvetica, sans-serif;
+  margin: 2vh;
 }
 
 .image{

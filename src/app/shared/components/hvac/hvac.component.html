@@ -1,20 +1,68 @@
-<div class="hvacgrid">
-  <div class="ambtemp">
-    <p class="textSmall">Ambient Temperature</p>
-    <p class="text">{{_ambienttemp}}°F</p>
-  </div>
-  <div class="exttemp">
-    <p class="textSmall">External Temperature</p>
-    <p class="text">{{_externaltemp}}°F</p>
-  </div>
+<div fxLayout="column" class="hvaccontrol">
+  <table style="width: 100%">
+    <tr>
+      <td>
+          <div class="ambtemp">
+              <p class="textSmall">AMBIENT TEMPERATURE</p>
+              <p class="text">{{_ambienttemp}}°F</p>
+            </div>
+      </td>
+      <td>
+          <div class="exttemp">
+              <p class="textSmall">EXTERNAL TEMPERATURE</p>
+              <p class="text">{{_externaltemp}}°F</p>
+            </div>
+      </td>
+    </tr>
+  </table>
   <div class="tempcontrol">
-    <p class="textSmall">Temperature</p>
+    <p class="textSmall">TEMPERATURE</p>
     <input type="range" min="32" max="90" class="slider" [(ngModel)]="_tempSlider" (change)="hvacChange()">
     <p class="text">{{_tempSlider}}°F</p>
   </div>
   <div class="fanspeed">
-    <p class="textSmall">Fan Speed</p>
+    <p class="textSmall">FAN SPEED</p>
     <input type="range" min="1" max="5" class="slider" [(ngModel)]="_fanspeed" (change)="hvacChange()">
     <p class="text">{{_fanspeed}}</p>
   </div>
+  <table style="width: 100%;">
+      <tr>
+        <td>
+          <div class="sunrooft">
+            <p class="textSmall">SUNROOF</p>
+          </div>
+        </td>
+        <td>
+          <div class="sunroofv">
+            <label class="switch">
+              <input type="checkbox" [(checked)]="_sunroof" [(ngModel)]="_sunroof" (change)="bodyControlChange()">
+              <span class="sliderc round"></span>
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="chargeporttext">
+            <p class="textSmall">CHARGE PORT</p>
+          </div>
+        </td>
+        <td>
+          <div class="chargeportvalue">
+            <label class="switch">
+              <input type="checkbox" [(checked)]="_chargeport" [(ngModel)]="_chargeport" (change)="bodyControlChange()">
+                <span class="sliderc round"></span>
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="textExtraSmall">
+          {{_sunrooftext}}
+        </td>
+        <td></td>
+        <td class="textExtraSmall">
+            {{_chargeporttext}}
+        </td>
+      </tr>
+    </table>
 </div>

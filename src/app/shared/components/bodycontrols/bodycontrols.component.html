@@ -1,38 +1,176 @@
-<div class="bodycontrolgrid">
-  <div class="sunrooft">
-    <p class="text">Sunroof</p>
-  </div>
-  <div class="sunroofv">
-    <label class="switch">
-      <input type="checkbox" [(checked)]="_sunroof" [(ngModel)]="_sunroof" (change)="bodyControlChange()">
-      <span class="slider round"></span>
-    </label>
-  </div>
-  <div class="doorstext">
-    <p class="text">Doors</p>
-  </div>
-  <div class="doorsvalue">
-    <label class="switch">
-      <input type="checkbox" [(checked)]="_doors" [(ngModel)]="_doors" (change)="bodyControlChange()">
-      <span class="slider round"></span>
-    </label>
-  </div>
-  <div class="chargeporttext">
-    <p class="text">Charge Port</p>
-  </div>
-  <div class="chargeportvalue">
-    <label class="switch">
-      <input type="checkbox" [(checked)]="_chargeport" [(ngModel)]="_chargeport" (change)="bodyControlChange()">
-      <span class="slider round"></span>
-    </label>
-  </div>
-  <div class="windowstext">
-    <p class="text">Windows</p>
-  </div>
-  <div class="windowsvalue">
-    <label class="switch">
-      <input type="checkbox" [(checked)]="_windows" [(ngModel)]="_windows" (change)="bodyControlChange()">
-      <span class="slider round"></span>
-    </label>
-  </div>
+<div class="bodycontrol">
+    <mat-accordion>
+      <mat-expansion-panel style="background-color:hsl(275, 0%, 20%);" [expanded]="true">
+        <mat-expansion-panel-header style="background-color:hsl(275, 0%, 20%);">
+          <mat-panel-title class="text">
+            DOORS
+          </mat-panel-title>
+          <mat-panel-description>
+            <mat-chip-list>
+              <mat-chip *ngIf="_doors" style="background-color: green" class="textSmall" selected>OPEN</mat-chip>
+              <mat-chip *ngIf="!_doors" style="background-color: hsl(275, 0%, 45%);" class="textSmall" selected>CLOSED</mat-chip>
+            </mat-chip-list>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <table style="width: 100%">
+          <tr>
+            <td>
+              <p class="textSmall">Front L</p>
+            </td>
+            <td>
+              <p class="textSmall">Front R</p>
+            </td>
+            <td>
+              <p class="textSmall">Back L</p>
+            </td>
+            <td>
+              <p class="textSmall">Back R</p>
+            </td>
+            <td>
+                <p class="textSmall">Trunk</p>
+            </td>
+            <td>
+                <p class="textSmall">Frunk</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="switch">
+                <input type="checkbox" [(checked)]="_doorsfl" [(ngModel)]="_doorsfl" (change)="bodyControlChange()">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" [(checked)]="_doorsfr" [(ngModel)]="_doorsfr" (change)="bodyControlChange()">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" [(checked)]="_doorsbl" [(ngModel)]="_doorsbl" (change)="bodyControlChange()">
+                <span class="slider round"></span>
+              </label>              
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" [(checked)]="_doorsbr" [(ngModel)]="_doorsbr" (change)="bodyControlChange()">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" [(checked)]="_trunk" [(ngModel)]="_trunk" (change)="bodyControlChange()">
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <label class="switch">
+                <input type="checkbox" [(checked)]="_frunk" [(ngModel)]="_frunk" (change)="bodyControlChange()">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+        </table>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <mat-accordion>
+        <mat-expansion-panel style="background-color:hsl(275, 0%, 20%);" [expanded]="true">
+          <mat-expansion-panel-header style="background-color:hsl(275, 0%, 20%);">
+            <mat-panel-title class="text">
+              WINDOWS
+            </mat-panel-title>
+            <mat-panel-description>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <table style="width: 100%">
+            <tr>
+              <td>
+                <p class="textSmall">Front L</p>
+                <div style="padding-left: 1.3vw">
+                  <mat-chip-list>
+                    <mat-chip *ngIf="!_windowfltext" style="background-color: green;" class="textSmall" selected>CLOSED</mat-chip>
+                    <mat-chip *ngIf="_windowfltext" style="background-color: hsl(275, 0%, 45%);" class="textSmall" selected>CLOSED</mat-chip>
+                  </mat-chip-list>
+                </div>
+              </td>
+              <td>
+                <p class="textSmall">Front R</p>
+                <div style="padding-left: 1.3vw">
+                    <mat-chip-list>
+                      <mat-chip *ngIf="!_windowfrtext" style="background-color: green;" class="textSmall" selected>CLOSED</mat-chip>
+                      <mat-chip *ngIf="_windowfrtext" style="background-color: hsl(275, 0%, 45%);" class="textSmall" selected>CLOSED</mat-chip>
+                  </mat-chip-list>
+                </div>
+              </td>
+              <td>
+                <p class="textSmall">Back L</p>
+                <div style="padding-left: 1.3vw">
+                    <mat-chip-list>
+                      <mat-chip *ngIf="!_windowbltext" style="background-color: green;" class="textSmall" selected>CLOSED</mat-chip>
+                      <mat-chip *ngIf="_windowbltext" style="background-color: hsl(275, 0%, 45%);" class="textSmall" selected>CLOSED</mat-chip>
+                  </mat-chip-list>
+                </div>
+              </td>
+              <td>
+                <p class="textSmall">Back R</p>
+                <div style="padding-left: 1.3vw">
+                    <mat-chip-list>
+                      <mat-chip *ngIf="!_windowbrtext" style="background-color: green;" class="textSmall" selected>CLOSED</mat-chip>
+                      <mat-chip *ngIf="_windowbrtext" style="background-color: hsl(275, 0%, 45%);" class="textSmall" selected>CLOSED</mat-chip>
+                  </mat-chip-list>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                  <mat-slider vertical [(ngModel)]="_windowfl" invert (change)="changeWindow()"></mat-slider>
+              </td>
+              <td>
+                  <mat-slider vertical [(ngModel)]="_windowfr" invert (change)="changeWindow()"></mat-slider>
+              </td>
+              <td>
+                  <mat-slider vertical [(ngModel)]="_windowbl" invert (change)="changeWindow()"></mat-slider>
+              </td>
+              <td>
+                  <mat-slider vertical [(ngModel)]="_windowbr" invert (change)="changeWindow()"></mat-slider>
+              </td>
+            </tr>
+            <tr>
+              <td style="align-content:center;">
+                <div style="padding-left: 1.8vw">
+                  <mat-chip-list>
+                    <mat-chip *ngIf="_windowfltext" style="background-color: green;" class="textSmall" selected>OPEN</mat-chip>
+                    <mat-chip *ngIf="!_windowfltext" style="background-color: hsl(275, 0%, 45%);" class="textSmall" selected>OPEN</mat-chip>
+                  </mat-chip-list>
+                </div>
+              </td>
+              <td>
+                <div style="padding-left: 1.8vw">
+                  <mat-chip-list>
+                    <mat-chip *ngIf="_windowfrtext" style="background-color: green;" class="textSmall" selected>OPEN</mat-chip>
+                    <mat-chip *ngIf="!_windowfrtext" style="background-color: hsl(275, 0%, 45%);" class="textSmall" selected>OPEN</mat-chip>
+                  </mat-chip-list>
+                </div>
+              </td>
+              <td>
+                <div style="padding-left: 1.8vw">
+                  <mat-chip-list>
+                    <mat-chip *ngIf="_windowbltext" style="background-color: green;" class="textSmall" selected>OPEN</mat-chip>
+                    <mat-chip *ngIf="!_windowbltext" style="background-color: hsl(275, 0%, 45%);" class="textSmall" selected>OPEN</mat-chip>
+                  </mat-chip-list>
+                </div>
+              </td>
+              <td>
+                <div style="padding-left: 1.8vw">
+                  <mat-chip-list>
+                    <mat-chip *ngIf="_windowbrtext" style="background-color: green;" class="textSmall" selected>OPEN</mat-chip>
+                    <mat-chip *ngIf="!_windowbrtext" style="background-color: hsl(275, 0%, 45%);" class="textSmall" selected>OPEN</mat-chip>
+                    </mat-chip-list>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </mat-expansion-panel>
+    </mat-accordion>
 </div>

@@ -1,59 +1,53 @@
-.bodycontrolgrid{
-  display: grid;
-  grid: 1fr 1fr 1fr 1fr / 1fr 1fr;
-  height: 100%;
-  width: 100%;
+.bodycontrol{
   text-align: center;
-  grid-template-areas:
-    "a b"
-    "c d"
-    "e f"
-    "g h";
-}
-
-.sunrooft{
-  grid-area: a;
-  margin: auto auto;
-}
-
-.sunroofv{
-  grid-area: b;
-  margin: auto auto;
+  align-items: center;
 }
 
 .doorstext{
-  grid-area: c;
   margin: auto auto;
 }
 
 .doorsvalue{
-  grid-area: d;
-  margin: auto auto;
-}
-
-.chargeporttext{
-  grid-area: e;
-  margin: auto auto;
-}
-
-.chargeportvalue{
-  grid-area: f;
   margin: auto auto;
 }
 
 .windowstext{
-  grid-area: g;
   margin: auto auto;
 }
 
 .windowsvalue{
-  grid-area: h;
   margin: auto auto;
 }
 
+.sunrooft{
+  padding: 1vh;
+  margin: auto auto;
+}
+
+.sunroofv{
+  padding: 1vh;
+  margin: auto auto;
+}
+
+.chargeporttext{
+  padding: 1vh;
+  margin: auto auto;
+}
+
+.chargeportvalue{
+  padding: 1vh;
+  margin: auto auto;
+}
+
+.textSmall{
+  color: hsl(0, 0%, 85%);
+  font-size: 1.5vmin;
+  font-family: Arial;
+  margin: 1.5vh;
+}
 
 .text{
-  color: white;
+  color: hsl(0, 0%, 85%);
   font-size: 2vmin;
   font-family: Arial;
 }
@@ -61,8 +55,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 3.2vw;
-  height: 1.7vw;
+  width: 2.6vw;
+  height: 1.5vw;
 }
 
 .switch input {display:none;}
@@ -74,7 +68,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: hsl(0, 0%, 60%);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -82,11 +76,11 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 1.5vw;
-  width: 1.5vw;
+  height: 1.3vw;
+  width: 1.3vw;
   left: 0.1vw;
   bottom: 0.1vw;
-  background-color: white;
+  background-color: hsl(0, 0%, 95%);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -100,9 +94,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(1.5vw);
-  -ms-transform: translateX(1.5vw);
-  transform: translateX(1.5vw);
+  -webkit-transform: translateX(1.2vw);
+  -ms-transform: translateX(1.2vw);
+  transform: translateX(1.2vw);
 }
 
 /* Rounded sliders */

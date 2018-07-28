@@ -1,44 +1,58 @@
-.hvacgrid{
-  display: grid;
-  grid: 1fr 1fr 1fr / 1fr 1fr;
-  height: 100%;
-  width: 100%;
+.hvaccontrol{
   text-align: center;
-  grid-template-areas:
-    "a b"
-    "c c"
-    "d d";
+  align-items: center;
 }
 
 .ambtemp{
-  grid-area: a;
+  width: 100%;
 }
 
 .exttemp{
-  grid-area: b;
+  width: 100%;
 }
 
 .tempcontrol{
-  grid-area: c;
+  padding: 2vh;
   width: 70%;
   margin: auto auto;
 }
 
 .fanspeed{
-  grid-area: d;
   width: 30%;
   margin: auto auto;
 }
 
 .textSmall{
-  color: white;
-  font-size: 1.25vmin;
+  color: hsl(0, 0%, 80%);
+  font-size: 1.5vmin;
+  font-family: Arial;
+  margin: 1.5vh;
+}
+
+.textExtraSmall{
+  color: hsl(0, 0%, 80%);
+  font-size: 1vmin;
   font-family: Arial;
 }
 
 .text{
-  color: white;
+  color: hsl(0, 0%, 85%);
   font-size: 2vmin;
+  font-family: Arial;
+  margin: 1.5vh;
+  font-weight: bold;
+}
+
+.greencolor{
+  background-color: green;
+  color: hsl(0, 0%, 80%);
+  font-size: 1vmin;
+  font-family: Arial;
+}
+.graycolor{
+  background-color: grey;
+  color: hsl(0, 0%, 80%);
+  font-size: 1vmin;
   font-family: Arial;
 }
 
@@ -76,4 +90,61 @@
   height: 3vh;
   background: #4CAF50;
   cursor: pointer;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.5vw;
+  height: 1.5vw;
+}
+
+.switch input {display:none;}
+
+.sliderc {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(0, 0%, 60%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sliderc:before {
+  position: absolute;
+  content: "";
+  height: 1.2vw;
+  width: 1.2vw;
+  left: 0.1vw;
+  bottom: 0.1vw;
+  background-color: hsl(0, 0%, 95%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .sliderc {
+  background-color: green;
+}
+
+input:focus + .sliderc {
+  box-shadow: 0 0 1vw green;
+}
+
+input:checked + .sliderc:before {
+  -webkit-transform: translateX(1.2vw);
+  -ms-transform: translateX(1.2vw);
+  transform: translateX(1.2vw);
+}
+
+/* Rounded sliders */
+.sliderc.round {
+  border-radius: 1.1vw;
+}
+
+.sliderc.round:before {
+  border-radius: 50%;
 }

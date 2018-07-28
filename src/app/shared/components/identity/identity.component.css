@@ -28,19 +28,19 @@
 }
 
 .textSmall{
-  color: white;
+  color: hsl(0, 0%, 85%);
   font-size: 1.25vmin;
   font-family: Arial;
 }
 
 .text{
-  color: white;
+  color: hsl(0, 0%, 85%);
   font-size: 2vmin;
   font-family: Arial;
 }
 
 .textLarge{
-  color: white;
+  color: hsl(0, 0%, 85%);
   font-size: 4vmin;
   font-family: Helvetica, sans-serif;
 }
