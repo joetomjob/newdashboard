@@ -1,6 +1,8 @@
 <div fxLayout="column" class="stateofchargecontrol">
   <div style="padding: 2vh">
-    <p class="textSmall">CHARGE REMAINING</p>
+    <p class="textSmall">CHARGE REMAINING
+      <mat-icon>battery_charging_full</mat-icon>
+    </p>
     <div class="battery">
       <div [ngClass]="_percentRemaining?getChargeClass():''" [style.width.%]="_percentRemaining">
         {{_percentRemaining}}%
@@ -8,7 +10,9 @@
     </div>
   </div>
   <div style="padding: 2vh">
-    <p class="textSmall">MILEAGE REMAINING</p>
+    <p class="textSmall">MILEAGE REMAINING
+        <mat-icon>ev_station</mat-icon>
+    </p>
     <div class="battery">
       <div [ngClass]="_remainingMileage?getMileageClass():''" [style.width.%]="_mileagepercent">
         {{_remainingMileage}}miles

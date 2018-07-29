@@ -1,20 +1,51 @@
 .configgrid{
   display: grid;
-  grid: 1fr 1fr 1fr 1fr 1fr 1fr  / 1fr 1fr;
+  grid: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr;
   height: 100%;
   width: 100%;
-  text-align: center;
+  text-align: left;
   grid-template-areas:
-    "a a"
-    "a a"
+    "j j"
+    "m m"
+    "a k"
     "b c"
-    "d e"
     "f g"
-    "h i";
+    "h i"
+    "n o"
+    "p q"
+    "d e";
 }
 
-.model{
+.nickname{
+  grid-area: j;
+}
+
+.vinvalue{
+  grid-area: m;
+}
+
+.dbidtext{
+  grid-area: n;
+}
+
+.dbidvalue{
+  grid-area: o;
+}
+
+.envtext{
+  grid-area: p;
+}
+
+.envvalue{
+  grid-area: q;
+}
+
+.modeltext{
   grid-area: a;
+}
+
+.modelvalue{
+  grid-area: k;
 }
 
 .carcolortext{
@@ -59,6 +90,10 @@
   color: hsl(0, 0%, 85%);
   font-size: 2vmin;
   font-family: Arial;
+  margin-bottom: 2.55vw;
+  margin-left: 1vh;
+  margin-top: 2vw;
+  margin-right: 1vh;
 }
 
 .textLarge{

@@ -9,21 +9,22 @@
 .chargefirmgrid{
   display: grid;
   grid: 50% 50% / 1fr;
-  width: 40vw;
+  width: 38vw;
   background-color:hsl(275, 0%, 20%);
   margin: 1vw;
 }
 
 .driverstategrid{
-  width: 40vw;
+  width: 38vw;
   background-color:hsl(275, 0%, 27%);
   margin: 1vw;
 }
 
 .identitygrid{
-  width: 33vw;
+  width: 20vw;
   background-color:hsl(275, 0%, 20%);
   margin: 1vw;
+  height: 95vh;
 }
 
 .bodycontrolsgrid{
@@ -39,7 +40,7 @@
 }
 
 .configurationgrid{
-  width: 33vw;
+  width: 20vw;
   background-color:hsl(275, 0%, 20%);
   margin: 1vw;
 }
@@ -49,4 +50,30 @@
   background-repeat:no-repeat;
   background-size:cover;
   width: 33vw;
+}
+
+.sidenavgrid{
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+  background-color:hsl(275, 0%, 20%);
+}
+
+.sidenavdiv{
+  background-color:hsl(275, 0%, 15%);
+}
+
+.buttonsidenav{
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  height: 100%; 
+  background-color:hsl(275, 0%, 15%);
+}
+
+.textSmall{
+  color: hsl(0, 0%, 80%);
+  font-size: 1.5vmin;
+  font-family: Arial;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }

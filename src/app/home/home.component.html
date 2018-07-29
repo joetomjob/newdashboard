@@ -1,40 +1,58 @@
-<mat-sidenav-container class="example-container" *ngIf="shouldRun">
-    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
-                 (closed)="events.push('close!')">
-      Sidenav content
-    </mat-sidenav>
-  
-    <mat-sidenav-content>
-      <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
-      <div class="parentgrid">
-          <div class="maingrid">
-            <div class="hvacgrid">
-              <app-hvac></app-hvac>
-            </div>
-            <div class="driverstategrid">
-              <app-driverstate></app-driverstate>
-            </div>
-            <!-- <div class="identitygrid">
-              <app-identity></app-identity>
-            </div> -->
+<div class="parentgrid">
+  <table>
+    <tr>
+      <td colspan="3">
+        <div class="maingrid">
+          <div class="hvacgrid">
+            <app-hvac></app-hvac>
           </div>
-          <div class="maingrid"
-               fxLayoutGap="10px">
-            <div class="bodycontrolsgrid">
-              <app-bodycontrols></app-bodycontrols>
-            </div>
-            <div class="chargefirmgrid">
-              <div>
-                <app-stateofcharge></app-stateofcharge>
-              </div>
-              <div>
-                <app-firmware></app-firmware>
-              </div>
-            </div>
-            <!-- <div class="configurationgrid">
-              <app-configuration></app-configuration>
-            </div> -->
+          <div class="driverstategrid">
+            <app-driverstate></app-driverstate>
           </div>
         </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+        <div class="maingrid"
+              fxLayoutGap="10px">
+          <div class="bodycontrolsgrid">
+            <app-bodycontrols></app-bodycontrols>
+          </div>
+          <div class="chargefirmgrid">
+            <div>
+              <app-stateofcharge></app-stateofcharge>
+            </div>
+            <div>
+              <app-firmware></app-firmware>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td colspan="1" style="width: 100%; height: 100%; align-items: right">
+        <div style="height: 100vh;" class="sidenavdiv">
+          <mat-sidenav-container class="example-container sidenavgrid" style="height: 100%;">
+            <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+                          (closed)="events.push('close!')" class="sidenavdiv">
+              <!-- <div class="identitygrid">
+                  <app-identity></app-identity>
+              </div> -->
+              <div class="configurationgrid">
+                <app-configuration></app-configuration>
+              </div>
+            </mat-sidenav>
+          
+            <mat-sidenav-content>
+              <button mat-button (click)="sidenav.toggle()" class="buttonsidenav">
+                <span *ngIf= "opened" class="textSmall">LESS DETAILS
+                    <mat-icon>fast_rewind</mat-icon>
+                </span>
+                <span *ngIf= "!opened" class="textSmall">MORE DETAILS
+                    <mat-icon>fast_forward</mat-icon>
+                </span>
+              </button>
+            </mat-sidenav-content>
+          </mat-sidenav-container>
+        </div>
+      </td>
+    </tr>
+  </table>
+  
+</div>
+

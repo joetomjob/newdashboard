@@ -16,12 +16,18 @@
     </tr>
   </table>
   <div class="tempcontrol">
-    <p class="textSmall">TEMPERATURE</p>
+    <p class="textSmall">
+        <mat-icon style="padding-right: 1.5vw;">ac_unit</mat-icon>
+        TEMPERATURE
+    </p>
     <input type="range" min="32" max="90" class="slider" [(ngModel)]="_tempSlider" (change)="hvacChange()">
     <p class="text">{{_tempSlider}}°F</p>
   </div>
   <div class="fanspeed">
-    <p class="textSmall">FAN SPEED</p>
+    <p class="textSmall">
+        <mat-icon style="padding-right: 1.5vw;">toys</mat-icon>
+      FAN SPEED
+    </p>
     <input type="range" min="1" max="5" class="slider" [(ngModel)]="_fanspeed" (change)="hvacChange()">
     <p class="text">{{_fanspeed}}</p>
   </div>

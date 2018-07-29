@@ -11,32 +11,31 @@
   text-align: center;
 }
 
-.nickname{
-  grid-area: a;
+.identitycontrol{
+  text-align: center;
+  align-items: center;
 }
 
-.vin{
-  grid-area: b;
-}
+.nickname{}
 
-.dbid{
-  grid-area: c;
-}
+.vin{}
 
-.environment{
-  grid-area: d;
-}
+.dbid{}
+
+.environment{}
 
 .textSmall{
   color: hsl(0, 0%, 85%);
   font-size: 1.25vmin;
   font-family: Arial;
+  text-align: center;
 }
 
 .text{
   color: hsl(0, 0%, 85%);
   font-size: 2vmin;
   font-family: Arial;
+  text-align: center;
 }
 
 .textLarge{

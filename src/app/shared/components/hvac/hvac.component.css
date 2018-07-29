@@ -117,8 +117,8 @@
 .sliderc:before {
   position: absolute;
   content: "";
-  height: 1.2vw;
-  width: 1.2vw;
+  height: 1.3vw;
+  width: 1.3vw;
   left: 0.1vw;
   bottom: 0.1vw;
   background-color: hsl(0, 0%, 95%);
