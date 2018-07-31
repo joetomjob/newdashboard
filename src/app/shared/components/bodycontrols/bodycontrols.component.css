@@ -107,3 +107,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+::ng-deep .specific-class > .mat-expansion-indicator:after {
+  color: hsl(0, 0%, 85%);
+}

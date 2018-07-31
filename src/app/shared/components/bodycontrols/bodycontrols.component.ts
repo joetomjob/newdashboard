@@ -149,4 +149,56 @@ export class BodycontrolsComponent implements OnInit {
       this._windows = false;
     }
   }
+
+  public windowclickopenfl() {
+    this._windowfl = 100;
+    this.bodyControlChange();
+  }
+  public windowclickopenfr() {
+    this._windowfr = 100;
+    this.bodyControlChange();
+  }
+  public windowclickopenbl() {
+    this._windowbl = 100;
+    this.bodyControlChange();
+  }
+  public windowclickopenbr() {
+    this._windowbr = 100;
+    this.bodyControlChange();
+  }
+
+  public windowclickclosefl() {
+    this._windowfl = 1;
+    this.bodyControlChange();
+  }
+  public windowclickclosefr() {
+    this._windowfr = 1;
+    this.bodyControlChange();
+  }
+  public windowclickclosebl() {
+    this._windowbl = 1;
+    this.bodyControlChange();
+  }
+  public windowclickclosebr() {
+    this._windowbr = 1;
+    this.bodyControlChange();
+  }
+
+  public windowcloseall() {
+    this._windowfl = 1;
+    this._windowfr = 1;
+    this._windowbl = 1;
+    this._windowbr = 1;
+    this.bodyControlChange();
+  }
+
+  public doorscloseall() {
+    this._doorsfl = false;
+    this._doorsfr = false;
+    this._doorsbl = false;
+    this._doorsbr = false;
+    this._trunk = false;
+    this._frunk = false;
+    this.bodyControlChange();
+  }
 }

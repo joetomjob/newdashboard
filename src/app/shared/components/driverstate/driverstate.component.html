@@ -1,7 +1,7 @@
 <div fxLayout="column" class="dscontrol">
   <div class="speed">
     <p class="text">
-        <mat-icon>network_check</mat-icon>
+        <mat-icon style="padding-right: 2vw; font-size: 40px; position: relative; top: 8px">network_check</mat-icon>
       SPEED (mph)
     </p>
     <p class="textLarge">{{_speed}}</p>
@@ -12,6 +12,10 @@
   </div>
   <div class="gear">
     <p class="textSmall">GEAR</p>
-    <p class="text">{{_gear}}</p>
+    <p class="text" style="font-weight: bold">{{_gear}}</p>
+  </div>
+  <div>
+    <p class="textSmall">ODOMETER </p>
+    <p class="textodo">2018 miles</p>
   </div>
 </div>

@@ -30,6 +30,13 @@
   margin: 2vh;
 }
 
+.textodo{
+  color: hsl(0, 0%, 95%);
+  font-size: 1.5vmin;
+  font-family: Arial;
+  margin: 1.5vh;
+}
+
 .image{
   width: 2vh;
   height: 2vh;

@@ -9,13 +9,13 @@
 .chargefirmgrid{
   display: grid;
   grid: 50% 50% / 1fr;
-  width: 38vw;
+  width: 36.75vw;
   background-color:hsl(275, 0%, 20%);
   margin: 1vw;
 }
 
 .driverstategrid{
-  width: 38vw;
+  width: 36.75vw;
   background-color:hsl(275, 0%, 27%);
   margin: 1vw;
 }
