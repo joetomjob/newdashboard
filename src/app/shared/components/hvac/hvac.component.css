@@ -12,14 +12,14 @@
 }
 
 .tempcontrol{
-  padding: 2vh;
+  padding: 1vmin;
   width: 70%;
-  margin: auto auto;
+  margin: 0 auto;
 }
 
 .fanspeed{
   width: 30%;
-  margin: auto auto;
+  margin: 0 auto;
 }
 
 .textSmall{
