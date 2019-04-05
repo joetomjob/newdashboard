@@ -111,3 +111,13 @@ input:checked + .slider:before {
 ::ng-deep .specific-class > .mat-expansion-indicator:after {
   color: hsl(0, 0%, 85%);
 }
+
+
+.mat-slider-vertical {
+  min-height: 8vmin;
+  margin-right: 1vmin;
+}
+
+.mat-slider {
+  padding: '0 0';
+}
