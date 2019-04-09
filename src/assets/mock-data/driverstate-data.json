@@ -1,5 +1,5 @@
 {
   "speed":70,
-  "acceleration":20,
+  "acceleration":3,
   "gear":"D"
 }
