@@ -17,7 +17,8 @@
   </table>
   <div class="tempcontrol">
     <p class="textSmall">
-        <mat-icon style="padding-right: 2vw; font-size: 32px; position: relative; top: 7px">ac_unit</mat-icon>
+        <!-- <mat-icon style="padding-right: 2vw; font-size: 32px; position: relative; top: 7px">ac_unit</mat-icon> -->
+        <img src="assets/icons/ac_unit.svg" alt="">
         TEMPERATURE
     </p>
     <input type="range" min="32" max="90" class="slider" [(ngModel)]="_tempSlider" (change)="hvacChange()">
@@ -25,7 +26,8 @@
   </div>
   <div class="fanspeed">
     <p class="textSmall">
-        <mat-icon style="padding-right: 2vw; font-size: 32px; position: relative; top: 7px">toys</mat-icon>
+        <!-- <mat-icon style="padding-right: 2vw; font-size: 32px; position: relative; top: 7px">toys</mat-icon> -->
+        <img src="assets/icons/toys.svg" alt="">
       FAN SPEED
     </p>
     <input type="range" min="1" max="5" class="slider" [(ngModel)]="_fanspeed" (change)="hvacChange()">
